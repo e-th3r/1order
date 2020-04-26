@@ -25,11 +25,9 @@ h2
 }
 p 
 {
-  text-align: left;
-  margin-left: 120px;
-  margin-right: 120px;
-  margin-top: 120px;
-  margin-bottom: 120px;
+  text-align: center;
+  margin-left: 60px;
+  margin-right: 60px;
   border-top: 5px solid;
   padding-left: 10px;
 }
@@ -46,4 +44,10 @@ border:1px solid #ccc; // рамка
 background:#eaeaea; //фон
 padding: .2em .75em; //отступы внутри
 text-decoration: none; //убрать подчеркивание ссылки
+}
+#content 
+{
+	top: 1px; /* Расстояние от верхнего края */
+    left: 20px; /* Расстояние от левого края */ 
+    bottom: 0; right: 0;
 }
