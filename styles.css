@@ -1,4 +1,4 @@
-body 
+.yellow-bgtheme
 {
 font-family: Noto sans, sans-serif;
 font-size: 18pt;
@@ -6,7 +6,24 @@ background: linear-gradient(#fb3, #9370DB);
 color: #333;
 font-weight: 600;
 }
-
+.green-bgtheme
+{
+  font-family: Noto sans, sans-serif;
+  font-size: 18pt;
+  background: linear-gradient(#5F9EA0, #3CB371);
+  color: #333;
+  font-weight: 600;
+}
+.theme-button 
+{
+  color: #9484f2;
+  border: 1px solid #9484f2;
+}
+.navbar
+{
+  background-color: #373540;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
+}
 h1 
 {
   color: #000000;
