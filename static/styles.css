@@ -14,16 +14,12 @@ font-weight: 600;
   color: #333;
   font-weight: 600;
 }
-.theme-button 
-{
-  color: #9484f2;
-  border: 1px solid #9484f2;
-}
 .navbar
 {
   background-color: #373540;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
 }
+
 h1 
 {
   color: #000000;
@@ -65,11 +61,4 @@ padding: 5px 25px 10px 25px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 150px;
-}
-.button 
-{
-border:1px solid #ccc; // рамка
-background:#eaeaea; //фон
-padding: .2em .75em; //отступы внутри
-text-decoration: none; //убрать подчеркивание ссылки
 }

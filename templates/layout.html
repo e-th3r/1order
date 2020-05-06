@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		* 
+		{
+		    margin: 0;
+		    padding: 0;
+		}
+
+		body {
+		    background: #494A5F;
+		    color: #666;
+		    font: 13px/1.5 Arial,Helvetica,sans-serif;
+		    word-wrap: break-word;text-align: center;
+		}
+
+		/* style button */
+
+
+		button 
+		{
+		  border-radius: 10px;
+		  border: 2px solid;
+		  font: 16px 'Open Sans', sans-serif;
+		  text-transform: uppercase;
+		  background: none;
+		  outline: none;
+		  cursor: pointer;
+		  -webkit-transition: all .5s;
+		  transition: all .5s;
+		}
+
+
+		/* btn-7 */
+		.btn-7 
+		{
+		  height: 45px;
+		  color: #FFFFFF;
+		  border-color: #FFFFFF;
+		  overflow: hidden;
+		  position: relative;
+		}
+		.btn-7:before, .btn-7:after {
+		  content: "";
+		  height: 100%;
+		  width: 0;
+		  position: absolute;
+		  z-index: -1;
+		  background-color: #A6ACEC;
+		  top: 0;
+		  -webkit-transition: all 0.25s;
+		  transition: all 0.25s;
+		}
+		.btn-7:before {
+		  left: 0;
+		}
+		.btn-7:after {
+		  right: 0;
+		}
+		.btn-7:hover {
+		  color: #27323A;
+		}
+		.btn-7:hover:before, .btn-7:hover:after {
+		  width: 50%;
+		}
+
+		/* end style button */
+
+		.clear{
+			display:block;
+			width:100%;
+			height:0px;
+			clear:both;
+			overflow:hidden;
+			visibility: hidden;
+			font:400 0px/0px Arial;
+		}
+
+		#wrapper {
+		    margin: 0 auto;
+			width: 1000px;
+		}
+
+		/*контент центральный блок*/
+		.content{
+		    margin: 30px auto;
+
+		}
+
+		/* Footer */
+
+		#footer {
+			width:1000px;
+			height: 100px;
+			margin: 0 auto;
+			padding: 14px 0px 0px 0px;
+			color: #999;
+		}
+
+		#footer p {
+			margin: 0;
+			text-align: center;
+			font-size: 11px;
+		}
+
+		#footer a {
+			text-decoration: underline;
+			color: #808080;
+		}
+
+		#footer a:hover {
+			text-decoration: none;
+		}
+	</style>
+	{% block title %}
+	{% endblock %}
+</head>
+<body class="page green-bgtheme">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+	  <a class="navbar-brand" href="index.html">
+	    <img src="/static/pictures/logo.png" width="60" height="60" class="d-inline-block align-centre" alt="">
+	    1Order
+	  </a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	      <li class="nav-item active">
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="aboutproject.html">About project</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Get started
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="whatis.html">What is Cryptocurrency?</a>
+	          <a class="dropdown-item" href="forinvestors.html">For cryptoinvestors</a>
+	          <a class="dropdown-item" href="forminers.html">For miners</a>
+	          <div class="dropdown-divider"></div>
+	          <a class="dropdown-item" href="forbusinessmen.html">For businessmen</a>
+	        </div>
+	      </li>
+	    </ul>
+	  <button class="btn-7">Change background</button>
+	    <form class="form-inline my-2 my-lg-0">
+	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+	    </form>
+	  </div>
+	</nav>
+
+	{% block body %}
+    {% endblock %}
+	<nav class="navbar sticky-bottom navbar-dark bg-dark">
+	  <a class="navbar-brand" href="#">Unfixed bottom</a>
+	</nav>
+  </div>
+  <!-- end div#footer -->
+  
+	<!-- Yandex.Metrika counter -->
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter24273625 = new Ya.Metrika({ id:24273625, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/24273625" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- /Yandex.Metrika counter -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="/static/animation.js"></script>
+</body>

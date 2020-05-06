@@ -1,5 +1,5 @@
 let page = document.querySelector('.page');
-let themeButton = document.querySelector('.theme-button');
+let themeButton = document.querySelector('.btn-7');
 themeButton.onclick = function()
 {
 	page.classList.toggle('yellow-bgtheme');
