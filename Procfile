@@ -1,1 +1,1 @@
-web: gunicorn order:app
+web: gunicorn app/__init__:app
