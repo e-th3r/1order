@@ -76,6 +76,18 @@ img {max-width: 100%;}
   height: auto;
 }
 
+input
+{
+  width: 280px !important;
+  margin-left: 8.5px;
+}
+
+#username
+{
+  border-radius: 30px !important;
+}
+
+
 @media (max-width: 1200px)
 {
   .content
