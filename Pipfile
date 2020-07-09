@@ -13,6 +13,7 @@ flask-migrate = "*"
 flask-wtf = "*"
 flask-login = "*"
 email-validator = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"

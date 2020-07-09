@@ -1,1 +1,1 @@
-web: gunicorn order:app
+web: flask db upgrade; flask translate compile; gunicorn order:app
