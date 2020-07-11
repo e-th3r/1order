@@ -51,5 +51,8 @@ def register():
         return('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+
+
 if __name__ == '__name__':
     app.run()
