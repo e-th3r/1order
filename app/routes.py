@@ -13,6 +13,9 @@ def whatis():
 @app.route("/aboutproject.html")
 def aboutproject():
 	return render_template("aboutproject.html")
+@app.route("/forinvestors.html")
+def forinvestors():
+    return render_template("forinvestors.html")
 
 @app.route('/login.html', methods=['GET', 'POST'])
 def login():
