@@ -1,12 +1,29 @@
 from flask import render_template, redirect, url_for, request
 from app import app, db
-from app.forms import LoginForm, RegistrationForm
-from app.models import User
+from app.forms import LoginForm, RegistrationForm, PostForm
+from app.models import User, Post
 from flask_login import login_user, logout_user, current_user, login_required
-@app.route("/") 
-@app.route("/index.html")
+@app.route("/", methods=['GET', 'POST']) 
+@app.route("/index.html", methods=['GET', 'POST'])
 def index():
-	return render_template("index.html")
+    form = PostForm()
+    if form.validate_on_submit():
+        post = Post(body=form.post.data, author=current_user)
+        db.session.add(post)
+        db.session.commit()
+        flash('Your post is now live!')
+        return redirect(url_for('index'))
+    posts = [
+        {
+            'author': {'username': 'John'},
+            'body': 'Beautiful day in Portland!'
+        },
+        {
+            'author': {'username': 'Susan'},
+            'body': 'The Avengers movie was so cool!'
+        }
+    ]
+    return render_template("index.html", title='Home Page', form=form, posts=posts)
 @app.route("/whatis.html")
 def whatis():
 	return render_template("whatis.html")
