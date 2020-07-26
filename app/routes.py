@@ -14,16 +14,16 @@ def index():
         db.session.commit()
         flash('Your post is now live!')
         return redirect(url_for('index'))
-        posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-        ]
+    posts = [
+    {
+        'author': {'username': 'John'},
+        'body': 'Beautiful day in Portland!'
+    },
+    {
+        'author': {'username': 'Susan'},
+        'body': 'The Avengers movie was so cool!'
+    }
+    ]
     return render_template("index.html", title='Home Page', form=form, posts=posts)
 @app.route("/whatis.html")
 def whatis():
