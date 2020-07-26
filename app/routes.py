@@ -23,7 +23,7 @@ def index():
             'author': {'username': 'Susan'},
             'body': 'The Avengers movie was so cool!'
         }
-    ]
+        ]
     return render_template("index.html", title='Home Page', form=form, posts=posts)
 @app.route("/whatis.html")
 def whatis():
