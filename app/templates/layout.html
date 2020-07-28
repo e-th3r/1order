@@ -162,6 +162,12 @@
 				left: 0em;
 			}
 		}
+		@media (max-width: 1410px)
+		{
+			.whitea{
+				font-size: 60%;
+			}
+		}
 		.content {
 			margin-top: 160px; 
 			background-color: #FFFFFF; 
@@ -242,7 +248,7 @@
 	    
       {% if current_user.is_anonymous %}
       <a class="btn-7 whitea" href="login.html">Sign in</a>
-      <a class="btn-7 whitea" style="position=relative; left:0.5em;" href="register.html">Sign up</a>
+      <a class="btn-7 whitea" style="position=relative; left:0.6em;" href="register.html">Sign up</a>
       {% else %}
       <a class="btn-7 whitea" href="">{{ current_user.username }}</a>
       <a class="btn-7 whitea" href="/logout">Logout</a>
